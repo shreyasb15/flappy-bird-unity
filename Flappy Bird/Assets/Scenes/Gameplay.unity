@@ -244,7 +244,7 @@ MonoBehaviour:
   prefab: {fileID: 4474589827272382186, guid: 60f88ac94c4adc84381228c6ea881021, type: 3}
   spawnRate: 1
   minHeight: -1
-  maxHeight: 1
+  maxHeight: 2
 --- !u!1 &344467511
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +615,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1231046969}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1523625300}
+        m_TargetAssemblyTypeName: GameManagerScript, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1231046969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,6 +892,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34801d10f786fa940a06437cb05334b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 344467516}
+  scoreText: {fileID: 2070270911}
+  playButton: {fileID: 1231046966}
+  gameOver: {fileID: 88833763}
 --- !u!4 &1523625301
 Transform:
   m_ObjectHideFlags: 0
@@ -906,6 +922,7 @@ GameObject:
   - component: {fileID: 2011029691}
   - component: {fileID: 2011029690}
   - component: {fileID: 2011029689}
+  - component: {fileID: 2011029693}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Obstacle
@@ -989,6 +1006,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2011029693
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011029688}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2070270909
 GameObject:
   m_ObjectHideFlags: 0

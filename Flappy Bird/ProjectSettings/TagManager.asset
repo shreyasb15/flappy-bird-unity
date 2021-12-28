@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Obstacle
-  - Score Trigger
+  - Scoring
   layers:
   - Default
   - TransparentFX
