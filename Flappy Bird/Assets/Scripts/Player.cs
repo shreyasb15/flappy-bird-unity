@@ -45,4 +45,16 @@ public class Player : MonoBehaviour
 
         spriteRenderer.sprite = sprites[spriteIndex];
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.tag == "Obstacle")
+        {
+            FindObjectOfType<GameManagerScript>().GameOver();
+        }
+        else if (other.gameObject.tag == "Score Trigger")
+        {
+            FindObjectOfType<GameManagerScript>().IncreaseScore();
+        }
+    }
 }
